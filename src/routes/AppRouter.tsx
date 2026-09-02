@@ -6,6 +6,7 @@ import { LoginPage } from '@/pages/Login/LoginPage';
 import { DashboardPage } from '@/pages/Dashboard/DashboardPage';
 import { VideosPage } from '@/pages/Videos/VideosPage';
 import { UploadVideoPage } from '@/pages/UploadVideo/UploadVideoPage';
+import { SubscriptionsPage } from '@/pages/Subscriptions/SubscriptionsPage';
 import { AuthGuard } from '@/components/layout/AuthGuard/AuthGuard';
 import { ROUTES } from '@/constants';
 
@@ -38,6 +39,14 @@ export function AppRouter() {
           element={
             <AuthGuard>
               <UploadVideoPage />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path={ROUTES.SUBSCRIPTIONS}
+          element={
+            <AuthGuard>
+              <SubscriptionsPage />
             </AuthGuard>
           }
         />
